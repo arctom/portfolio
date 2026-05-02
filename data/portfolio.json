@@ -1,0 +1,123 @@
+{
+    "name": "Tom Arc",
+    "headerTaglineOne": "Welcome to my portfolio 😁",
+    "headerTaglineTwo": "",
+    "headerTaglineThree": "",
+    "headerTaglineFour": "Data Scientist and Machine Learning Developer",
+    "showCursor": true,
+    "showBlog": false,
+    "darkMode": true,
+    "showResume": true,
+    "socials": [
+        {
+            "id": "1",
+            "title": "Github",
+            "link": "https://github.com/arctom"
+        },
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/tom-arc/"
+        },
+        {
+            "id": "5",
+            "title": "Email",
+            "link": "mailto:arctomb@gmail.com"
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "Curriculum Vitae Categorization ",
+            "description": "Developed an OCR scanner and custom Large Language Model (LLM) to automate job post classification for Grupo PiSA, integrating data preprocessing, feature extraction, and model evaluation into a comprehensive ML pipeline using TensorFlow and SpaCy. Achieved a 50% reduction in processing time against manual classification.",
+            "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "https://miscompetenciastec21.tec.mx/elumen/portfolio/qYD5WQUAgetB2Wo"
+        },
+        {
+            "id": "2",
+            "title": "Deep Convolutional Neural Networks for image classification (DCNN)",
+            "description": "Classification of satellite images based on RGB values and topographical data using DCNN and ReLU function, with an accuracy result of 79% after 50 epochs of training.",
+            "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "https://medium.com/@a01562405/clasificaci%C3%B3n-de-im%C3%A1genes-con-redes-neuronales-convolucionales-profundas-af37091d8497"
+        },
+        {
+            "id": "3",
+            "title": "ByteBoost Algorithmic Trading Assistant",
+            "description": "Utilized complex algorithms to analyze historical data, identify market patterns, and suggest optimal entries and exits. ByteBoost simplifies trading decisions for users by using liquidation triggers based on leverage and risk tolerance producing an approximate 40% monthly portfolio growth.",
+            "imageSrc": "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "https://byteboost.ai/"
+        },
+        {
+            "id": "4",
+            "title": "Transport Optimization in Logistics",
+            "description": "Implemented Guided Local Search (GLS) over a three-month period to solve the CVRP for Coppel's e-commerce deliveries, reducing the number of trucks required from 11 to 9 (an 18% improvement) and total distance traveled from 720.6 km to 422.7 km per day (a 41% reduction), while significantly maximizing delivery efficiency.",
+            "imageSrc": "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "https://miscompetenciastec21.tec.mx/elumen/portfolio/qYD5WQUAgetB2Wo"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "Art Direction",
+            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+        },
+        {
+            "id": "2",
+            "title": "Branding",
+            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+        },
+        {
+            "id": "3",
+            "title": "Web Design",
+            "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+        },
+        {
+            "id": "4",
+            "title": "3D Design",
+            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+        }
+    ],
+    "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "resume": {
+        "tagline": "👋  I'm a software engineer, product designer.",
+        "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+        "experiences": [
+            {
+                "id": "1",
+                "dates": "March 2022 - Present",
+                "type": "Full Time",
+                "position": "Frontend Engineer at X",
+                "bullets": "Bullet One, Bullet Two"
+            },
+            {
+                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+                "dates": "July 2020 - March 2022",
+                "type": "Full Time",
+                "position": "Frontend Engineer at X",
+                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+            }
+        ],
+        "education": {
+            "universityName": "University X",
+            "universityDate": "2016-2020",
+            "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        },
+        "languages": [
+            "Javascript",
+            "HTML5",
+            "CSS",
+            "Python",
+            "Go"
+        ],
+        "frameworks": [
+            "React",
+            "Typescript",
+            "NodeJs"
+        ],
+        "others": [
+            "Figma",
+            "AdobeXD",
+            "AWS"
+        ]
+    }
+}
