@@ -30,7 +30,7 @@
             "id": "1",
             "title": "Applicant Curriculum Vitae Categorization",
             "description": "Established an OCR scanner and custom LLM to automate candidate classification for Grupo PiSA. Integrated NER feature extraction and lemmatization using NLTK and SpaCy. Achieved a 50% reduction in processing time compared to manual classification.",
-            "imageSrc": "https://www.thejobcrowd.com/wp-content/uploads/2017/12/piles-of-resumes.png",
+            "imageSrc": "https://www.hbrfrance.fr/imgre/fit/~1~HBR~2022~11~28~bb4ae6b9-22e6-4f2e-b864-339566b42549.jpeg/1200x900/focusPoint/50%2C50/crazy-busy-le-nouveau-symbole-de-statut-social.jpg",
             "url": "https://miscompetenciastec21.tec.mx/elumen/portfolio/qYD5WQUAgetB2Wo"
         },
         {
@@ -77,7 +77,7 @@
             "description": "Translating business needs into technical solutions. Stakeholder management and delivering measurable product outcomes through AI implementation."
         }
     ],
-    "aboutpara": "Machine Learning Engineer and product-focused Head of AI with expertise in AI, cloud computing, and advanced analytics. Ability to translate business needs into technical solutions. Successfully lead teams to deliver generative AI solutions across multiple industries. Specialized in Python, Generative AI, LLM, and cloud platforms AWS/GCP and translating use cases into measurable product outcomes.",
+    "aboutpara": "I am a machine Learning Engineer and product-focused Head of AI with expertise in AI, cloud computing, and advanced analytics. Ability to translate business needs into technical solutions. Successfully lead teams to deliver generative AI solutions across multiple industries. Specialized in Python, Generative AI, LLM, and cloud platforms AWS/GCP and translating use cases into measurable product outcomes.",
     "resume": {
         "tagline": "👋 Head of AI Development | Machine Learning Engineer",
         "description": "Machine Learning Engineer and product-focused Head of AI with expertise in AI, cloud computing, and advanced analytics. Successfully lead teams to deliver generative AI solutions across multiple industries.",

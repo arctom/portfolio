@@ -46,7 +46,7 @@ const Cursor = () => {
 
     const animate = (time) => {
       if (previousTimeRef.current !== undefined) {
-        const smoothness = 0.2;
+        const smoothness = 0.5;
         
         currentPosition.current.x += (targetPosition.current.x - currentPosition.current.x) * smoothness;
         currentPosition.current.y += (targetPosition.current.y - currentPosition.current.y) * smoothness;
@@ -77,7 +77,7 @@ const Cursor = () => {
 
   if (!mount) return null;
 
-  const scale = isHovering ? 2 : 1;
+  const scale = isHovering ? 1.5 : 1;
   const opacity = isHovering ? 0.5 : 1;
 
   return (
@@ -88,8 +88,8 @@ const Cursor = () => {
         position: "fixed",
         left: 0,
         top: 0,
-        width: "30px",
-        height: "30px",
+        width: "25px",
+        height: "25px",
         borderRadius: "50%",
         backgroundColor: getCustomColor(),
         pointerEvents: "none",
