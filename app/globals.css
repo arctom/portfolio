@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: #0a0a0a;
+    --surface-raised: #111111;
+    --surface-overlay: #1a1a1a;
+    --accent: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-cyan: #06b6d4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 dark:bg-surface dark:text-white antialiased;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-accent/30 text-gray-900 dark:text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-accent-purple to-accent-cyan;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Animated gradient blobs for hero */
+.gradient-blob {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0.3;
+  filter: blur(80px);
+}
+
+.gradient-blob-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+  top: -200px;
+  left: -100px;
+  animation: blob-float 20s ease-in-out infinite alternate;
+}
+
+.gradient-blob-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+  top: 100px;
+  right: -150px;
+  animation: blob-float 25s ease-in-out infinite alternate-reverse;
+}
+
+.gradient-blob-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
+  bottom: -100px;
+  left: 30%;
+  animation: blob-float 30s ease-in-out infinite alternate;
+}
+
+@keyframes blob-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(10px, -10px) scale(1.05);
+  }
+}
