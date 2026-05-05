@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// i18n — translations & language configuration
+// i18n- translations & language configuration
 // ---------------------------------------------------------------------------
 export type Language = "en" | "es" | "fr";
 
@@ -83,7 +83,7 @@ export interface Translations {
     ogDescription: string;
   };
 
-  // Content translations — portfolio.json fields
+  // Content translations- portfolio.json fields
   content: {
     headerTaglineOne: string;
     headerTaglineTwo: string;
@@ -104,7 +104,7 @@ export interface Translations {
     projectDescriptions: Record<string, string>;
   };
 
-  // Content translations — data/projects.ts
+  // Content translations- data/projects.ts
   caseStudies: Record<
     string,
     {
@@ -150,7 +150,7 @@ const en: Translations = {
     heading2: "building AI that delivers",
     heading3: "measurable business outcomes",
     subheading:
-      "I lead AI teams and build production ML systems — from LLM-powered assistants to optimization engines — that reduce costs, accelerate decisions, and drive revenue.",
+      "I lead AI teams and build production ML systems- from LLM-powered assistants to optimization engines- that reduce costs, accelerate decisions, and drive revenue.",
     viewMyWork: "View My Work",
     getInTouch: "Get in Touch",
     stats: {
@@ -333,7 +333,7 @@ const en: Translations = {
     },
     {
       title: "Translate, then build",
-      body: "The hardest part of AI is not the model — it's understanding the business problem well enough to frame it correctly. I spend as much time with stakeholders as I do with code. Technical fluency means nothing without context.",
+      body: "The hardest part of AI is not the model- it's understanding the business problem well enough to frame it correctly. I spend as much time with stakeholders as I do with code. Technical fluency means nothing without context.",
     },
     {
       title: "Simple first, complex when necessary",
@@ -358,7 +358,7 @@ const es: Translations = {
     heading2: "creando IA que genera",
     heading3: "resultados de negocio medibles",
     subheading:
-      "Lidero equipos de IA y construyo sistemas de ML en producción — desde asistentes con LLMs hasta motores de optimización — que reducen costos, aceleran decisiones e impulsan ingresos.",
+      "Lidero equipos de IA y construyo sistemas de ML en producción- desde asistentes con LLMs hasta motores de optimización- que reducen costos, aceleran decisiones e impulsan ingresos.",
     viewMyWork: "Ver Mi Trabajo",
     getInTouch: "Contactar",
     stats: {
@@ -542,7 +542,7 @@ const es: Translations = {
     },
     {
       title: "Traducir, luego construir",
-      body: "La parte más difícil de la IA no es el modelo — es entender el problema de negocio lo suficiente para formularlo correctamente. Paso tanto tiempo con stakeholders como con código. La fluidez técnica no significa nada sin contexto.",
+      body: "La parte más difícil de la IA no es el modelo- es entender el problema de negocio lo suficiente para formularlo correctamente. Paso tanto tiempo con stakeholders como con código. La fluidez técnica no significa nada sin contexto.",
     },
     {
       title: "Simple primero, complejo cuando sea necesario",
@@ -567,7 +567,7 @@ const fr: Translations = {
     heading2: "créer de l'IA qui génère",
     heading3: "des résultats mesurables",
     subheading:
-      "Je dirige des équipes IA et construis des systèmes de ML en production — des assistants LLM aux moteurs d'optimisation — qui réduisent les coûts, accélèrent les décisions et génèrent des revenus.",
+      "Je dirige des équipes IA et construis des systèmes de ML en production- des assistants LLM aux moteurs d'optimisation- qui réduisent les coûts, accélèrent les décisions et génèrent des revenus.",
     viewMyWork: "Voir Mon Travail",
     getInTouch: "Me Contacter",
     stats: {
@@ -751,7 +751,7 @@ const fr: Translations = {
     },
     {
       title: "Traduire, puis construire",
-      body: "Le plus difficile dans l'IA n'est pas le modèle — c'est comprendre suffisamment le problème métier pour le formuler correctement. Je passe autant de temps avec les parties prenantes qu'avec le code. La maîtrise technique ne signifie rien sans contexte.",
+      body: "Le plus difficile dans l'IA n'est pas le modèle- c'est comprendre suffisamment le problème métier pour le formuler correctement. Je passe autant de temps avec les parties prenantes qu'avec le code. La maîtrise technique ne signifie rien sans contexte.",
     },
     {
       title: "Simple d'abord, complexe si nécessaire",

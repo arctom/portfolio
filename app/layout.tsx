@@ -25,13 +25,13 @@ const Cursor = dynamic(() => import("@/components/layout/Cursor"), {
 
 export const metadata: Metadata = {
   title: {
-    default: `${data.name} — Machine Learning Engineer`,
-    template: `%s — ${data.name}`,
+    default: `${data.name}- Machine Learning Engineer`,
+    template: `%s- ${data.name}`,
   },
   description:
     "Machine Learning Engineer and Head of AI specializing in Generative AI, LLM solutions, and production ML systems. Building AI that delivers measurable business outcomes.",
   openGraph: {
-    title: `${data.name} — Machine Learning Engineer`,
+    title: `${data.name}- Machine Learning Engineer`,
     description:
       "Machine Learning Engineer and Head of AI specializing in Generative AI, LLM solutions, and production ML systems.",
     type: "website",

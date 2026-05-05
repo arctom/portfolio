@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CaseStudyProject } from "@/lib/types";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
-// Labels not yet in the main translation map — small enough to inline
+// Labels not yet in the main translation map- small enough to inline
 const uiLabels: Record<string, Record<string, string>> = {
   en: {
     howItWorks: "How it works",
