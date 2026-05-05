@@ -1,23 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 import portfolioData from "@/data/portfolio.json";
 import { PortfolioData } from "@/lib/types";
 
 const data = portfolioData as PortfolioData;
 
-const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Experience", href: "#experience" },
-  { label: "Approach", href: "#approach" },
-  { label: "Contact", href: "#contact" },
-];
-
 export default function Navbar() {
+  const { t, cycleLanguage, flag, label } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { label: t.nav.work, href: "#work" },
+    { label: t.nav.experience, href: "#experience" },
+    { label: t.nav.approach, href: "#approach" },
+    { label: t.nav.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -68,7 +71,7 @@ export default function Navbar() {
             </a>
 
             {/* Desktop nav */}
-            <div className="hidden laptop:flex items-center gap-8">
+            <div className="hidden laptop:flex items-center gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -82,11 +85,44 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+
+              {/* Language cycle */}
+              <button
+                onClick={cycleLanguage}
+                className="w-7 h-7 rounded-full overflow-hidden border border-gray-300 dark:border-white/20 hover:border-accent dark:hover:border-accent transition-colors link flex-shrink-0"
+                aria-label={label}
+                title={label}
+              >
+                <Image
+                  src={flag}
+                  alt={label}
+                  width={28}
+                  height={28}
+                  className="w-full h-full object-cover"
+                />
+              </button>
+
               <ThemeToggle />
             </div>
 
             {/* Mobile buttons */}
             <div className="flex items-center gap-2 laptop:hidden">
+              {/* Language cycle (mobile) */}
+              <button
+                onClick={cycleLanguage}
+                className="w-7 h-7 rounded-full overflow-hidden border border-gray-300 dark:border-white/20 hover:border-accent dark:hover:border-accent transition-colors link flex-shrink-0"
+                aria-label={label}
+                title={label}
+              >
+                <Image
+                  src={flag}
+                  alt={label}
+                  width={28}
+                  height={28}
+                  className="w-full h-full object-cover"
+                />
+              </button>
+
               <ThemeToggle />
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}

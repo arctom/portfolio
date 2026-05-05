@@ -1,46 +1,49 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ExperienceTimelineItem from "@/components/ui/ExperienceTimelineItem";
 import SkillGroup from "@/components/ui/SkillGroup";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 import portfolioData from "@/data/portfolio.json";
 import { PortfolioData } from "@/lib/types";
 
 const data = portfolioData as PortfolioData;
 const { resume } = data;
 
-const skillGroups = [
-  {
-    title: "ML & AI",
-    skills: [
-      "Python",
-      "R",
-      "TensorFlow",
-      "RAG",
-      "NLP",
-      "SageMaker",
-      "VertexAI",
-    ],
-  },
-  {
-    title: "Data Engineering",
-    skills: ["SQL", "MongoDB", "Docker", "Power BI"],
-  },
-  {
-    title: "Backend & Systems",
-    skills: [
-      "C++",
-      "FastAPI",
-      "React",
-      "AWS",
-      "GCP",
-      "Azure",
-      "IBM",
-      "Git",
-      "Agile",
-    ],
-  },
-];
-
 export default function ExperienceSkills() {
+  const { t } = useLanguage();
+
+  const skillGroups = [
+    {
+      title: t.skillGroups.mlAi,
+      skills: [
+        "Python",
+        "R",
+        "TensorFlow",
+        "RAG",
+        "NLP",
+        "SageMaker",
+        "VertexAI",
+      ],
+    },
+    {
+      title: t.skillGroups.dataEngineering,
+      skills: ["SQL", "MongoDB", "Docker", "Power BI"],
+    },
+    {
+      title: t.skillGroups.backendSystems,
+      skills: [
+        "C++",
+        "FastAPI",
+        "React",
+        "AWS",
+        "GCP",
+        "Azure",
+        "IBM",
+        "Git",
+        "Agile",
+      ],
+    },
+  ];
+
   return (
     <section id="experience" className="py-24 tablet:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,12 +51,12 @@ export default function ExperienceSkills() {
           {/* Section header */}
           <div className="mb-16">
             <p className="text-sm font-medium text-accent/80 mb-4 tracking-widest uppercase">
-              Experience
+              {t.experience.label}
             </p>
             <h2 className="text-3xl tablet:text-4xl font-bold tracking-tight text-balance">
-              Where I&apos;ve built,
+              {t.experience.heading1}
               <br />
-              <span className="text-gray-500 dark:text-white/40">what I use</span>
+              <span className="text-gray-500 dark:text-white/40">{t.experience.heading2}</span>
             </h2>
           </div>
         </AnimatedSection>
@@ -67,8 +70,8 @@ export default function ExperienceSkills() {
                   key={exp.id}
                   dates={exp.dates}
                   type={exp.type}
-                  position={exp.position}
-                  bullets={exp.bullets}
+                  position={t.content.experiencePositions[exp.id] ?? exp.position}
+                  bullets={t.content.experienceBullets[exp.id] ?? exp.bullets}
                 />
               ))}
             </AnimatedSection>
@@ -86,7 +89,7 @@ export default function ExperienceSkills() {
                     {resume.education.universityName}
                   </p>
                   <p className="text-sm text-gray-500 dark:text-white/50 leading-relaxed">
-                    {resume.education.universityPara}
+                    {t.content.educationPara}
                   </p>
                 </div>
               </div>
@@ -98,7 +101,7 @@ export default function ExperienceSkills() {
             <AnimatedSection delay={0.2}>
               <div className="laptop:sticky laptop:top-24">
                 <h3 className="text-lg font-semibold mb-6">
-                  Technical Skills
+                  {t.experience.technicalSkills}
                 </h3>
                 {skillGroups.map((group) => (
                   <SkillGroup

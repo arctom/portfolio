@@ -3,10 +3,13 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ProjectCaseStudy from "@/components/ui/ProjectCaseStudy";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 import { caseStudyProjects } from "@/data/projects";
 import { fadeInUp } from "@/components/ui/AnimatedSection";
 
 export default function Projects() {
+  const { t } = useLanguage();
+
   return (
     <section id="work" className="py-24 tablet:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,12 +17,12 @@ export default function Projects() {
           {/* Section header */}
           <div className="mb-16">
             <p className="text-sm font-medium text-accent/80 mb-4 tracking-widest uppercase">
-              Selected Work
+              {t.projects.label}
             </p>
             <h2 className="text-3xl tablet:text-4xl font-bold tracking-tight text-balance">
-              Problems solved,
+              {t.projects.heading1}
               <br />
-              <span className="text-gray-500 dark:text-white/40">not just projects shipped</span>
+              <span className="text-gray-500 dark:text-white/40">{t.projects.heading2}</span>
             </h2>
           </div>
         </AnimatedSection>
@@ -34,7 +37,19 @@ export default function Projects() {
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeInUp}
             >
-              <ProjectCaseStudy project={project} index={i} />
+              <ProjectCaseStudy
+                project={{
+                  ...project,
+                  title: t.caseStudies[project.id]?.title ?? project.title,
+                  problem: t.caseStudies[project.id]?.problem ?? project.problem,
+                  solution: t.caseStudies[project.id]?.solution ?? project.solution,
+                  impact: {
+                    ...project.impact,
+                    label: t.caseStudies[project.id]?.impactLabel ?? project.impact.label,
+                  },
+                }}
+                index={i}
+              />
             </motion.div>
           ))}
         </div>

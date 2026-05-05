@@ -1,11 +1,13 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 import portfolioData from "@/data/portfolio.json";
 import { PortfolioData } from "@/lib/types";
 
 const data = portfolioData as PortfolioData;
 
 export default function Contact() {
+  const { t } = useLanguage();
   const email = data.socials.find((s) => s.title === "Email")?.link || "";
   const linkedin = data.socials.find((s) => s.title === "LinkedIn")?.link || "";
   const github = data.socials.find((s) => s.title === "Github")?.link || "";
@@ -17,14 +19,13 @@ export default function Contact() {
           {/* Section header */}
           <div className="mb-16">
             <p className="text-sm font-medium text-accent/80 mb-4 tracking-widest uppercase">
-              Let&apos;s Talk
+              {t.contact.label}
             </p>
             <h2 className="text-3xl tablet:text-4xl laptop:text-5xl font-bold tracking-tight text-balance mb-6">
-              Interested in working together?
+              {t.contact.heading}
             </h2>
             <p className="text-lg text-gray-500 dark:text-white/50 max-w-xl text-balance">
-              I&apos;m open to senior ML engineering, AI leadership, and
-              consulting opportunities where I can drive measurable impact.
+              {t.contact.body}
             </p>
           </div>
         </AnimatedSection>
@@ -43,10 +44,10 @@ export default function Contact() {
             {/* Secondary links */}
             <div className="flex flex-wrap gap-4">
               <Button href={linkedin} variant="ghost">
-                LinkedIn
+                {t.contact.linkedin}
               </Button>
               <Button href={github} variant="ghost">
-                GitHub
+                {t.contact.github}
               </Button>
             </div>
 
@@ -57,7 +58,7 @@ export default function Contact() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
               </span>
               <span className="text-sm text-green-400/90 font-medium">
-                Open to opportunities
+                {t.contact.availability}
               </span>
             </div>
           </div>

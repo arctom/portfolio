@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import "./globals.css";
 import ThemeProvider from "@/components/providers/ThemeProvider";
+import { LanguageProvider } from "@/components/providers/LanguageProvider";
 import Footer from "@/components/layout/Footer";
 import portfolioData from "@/data/portfolio.json";
 import { PortfolioData } from "@/lib/types";
@@ -45,12 +46,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          {data.showCursor && <Cursor />}
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            {data.showCursor && <Cursor />}
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

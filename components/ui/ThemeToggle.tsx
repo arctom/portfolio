@@ -3,10 +3,12 @@
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => setMounted(true), []);
 
@@ -21,7 +23,7 @@ export default function ThemeToggle() {
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className="relative w-9 h-9 flex items-center justify-center rounded-full border border-gray-200 dark:border-white/10 hover:border-gray-400 dark:hover:border-white/30 text-gray-500 dark:text-white/60 hover:text-gray-900 dark:hover:text-white transition-colors"
       whileTap={{ scale: 0.9 }}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isDark ? t.theme.switchToLight : t.theme.switchToDark}
     >
       <motion.svg
         width="16"

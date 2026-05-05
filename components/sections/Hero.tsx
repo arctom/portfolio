@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import GradientBackground from "@/components/ui/GradientBackground";
 import Button from "@/components/ui/Button";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 import portfolioData from "@/data/portfolio.json";
 import { PortfolioData } from "@/lib/types";
 
@@ -31,6 +32,8 @@ const item = {
 };
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <GradientBackground />
@@ -55,9 +58,9 @@ export default function Hero() {
             variants={item}
             className="text-4xl tablet:text-5xl laptop:text-6xl desktop:text-7xl font-bold tracking-tight text-balance leading-[1.05] mb-6"
           >
-            Machine Learning Engineer{" "}
-            <span className="text-gray-500 dark:text-white/40">building AI that delivers</span>{" "}
-            measurable business outcomes
+            {t.hero.heading1}{" "}
+            <span className="text-gray-500 dark:text-white/40">{t.hero.heading2}</span>{" "}
+            {t.hero.heading3}
           </motion.h1>
 
           {/* Subheadline */}
@@ -65,9 +68,7 @@ export default function Hero() {
             variants={item}
             className="text-lg tablet:text-xl text-gray-500 dark:text-white/50 max-w-2xl text-balance mb-10 leading-relaxed"
           >
-            I lead AI teams and build production ML systems — from LLM-powered
-            assistants to optimization engines — that reduce costs, accelerate
-            decisions, and drive revenue.
+            {t.hero.subheading}
           </motion.p>
 
           {/* CTAs */}
@@ -76,10 +77,10 @@ export default function Hero() {
             className="flex flex-col mob:flex-row gap-4"
           >
             <Button href="#work" variant="primary">
-              View My Work
+              {t.hero.viewMyWork}
             </Button>
             <Button href="#contact" variant="ghost">
-              Get in Touch
+              {t.hero.getInTouch}
             </Button>
           </motion.div>
 
@@ -91,19 +92,19 @@ export default function Hero() {
             <div>
               <p className="text-2xl font-semibold text-gray-900 dark:text-white">$20M+</p>
               <p className="text-sm text-gray-400 dark:text-white/40 mt-1">
-                annual projected savings
+                {t.hero.stats.savings}
               </p>
             </div>
             <div>
               <p className="text-2xl font-semibold text-gray-900 dark:text-white">10+</p>
               <p className="text-sm text-gray-400 dark:text-white/40 mt-1">
-                cross-functional team members led
+                {t.hero.stats.team}
               </p>
             </div>
             <div>
               <p className="text-2xl font-semibold text-gray-900 dark:text-white">4+</p>
               <p className="text-sm text-gray-400 dark:text-white/40 mt-1">
-                industries with deployed AI
+                {t.hero.stats.industries}
               </p>
             </div>
           </motion.div>

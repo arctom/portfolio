@@ -3,6 +3,35 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CaseStudyProject } from "@/lib/types";
+import { useLanguage } from "@/components/providers/LanguageProvider";
+
+// Labels not yet in the main translation map — small enough to inline
+const uiLabels: Record<string, Record<string, string>> = {
+  en: {
+    howItWorks: "How it works",
+    lessDetail: "Less detail",
+    theProblem: "The Problem",
+    theSolution: "The Solution",
+    technology: "Technology",
+    viewProject: "View project",
+  },
+  es: {
+    howItWorks: "Cómo funciona",
+    lessDetail: "Menos detalle",
+    theProblem: "El Problema",
+    theSolution: "La Solución",
+    technology: "Tecnología",
+    viewProject: "Ver proyecto",
+  },
+  fr: {
+    howItWorks: "Comment ça marche",
+    lessDetail: "Moins de détails",
+    theProblem: "Le Problème",
+    theSolution: "La Solution",
+    technology: "Technologie",
+    viewProject: "Voir le projet",
+  },
+};
 
 export default function ProjectCaseStudy({
   project,
@@ -12,6 +41,8 @@ export default function ProjectCaseStudy({
   index: number;
 }) {
   const [expanded, setExpanded] = useState(false);
+  const { language } = useLanguage();
+  const labels = uiLabels[language];
   const isEven = index % 2 === 0;
 
   return (
@@ -52,7 +83,7 @@ export default function ProjectCaseStudy({
             onClick={() => setExpanded(!expanded)}
             className="text-sm text-gray-500 dark:text-white/50 hover:text-gray-900 dark:hover:text-white transition-colors link flex items-center gap-2"
           >
-            {expanded ? "Less detail" : "How it works"}
+            {expanded ? labels.lessDetail : labels.howItWorks}
             <motion.svg
               width="12"
               height="12"
@@ -80,7 +111,7 @@ export default function ProjectCaseStudy({
                 <div className="pt-6 mt-6 border-t border-gray-200 dark:border-white/5 space-y-4">
                   <div>
                     <p className="text-xs font-medium text-gray-400 dark:text-white/30 uppercase tracking-wider mb-2">
-                      The Problem
+                      {labels.theProblem}
                     </p>
                     <p className="text-sm text-gray-600 dark:text-white/60 leading-relaxed">
                       {project.problem}
@@ -88,7 +119,7 @@ export default function ProjectCaseStudy({
                   </div>
                   <div>
                     <p className="text-xs font-medium text-gray-400 dark:text-white/30 uppercase tracking-wider mb-2">
-                      The Solution
+                      {labels.theSolution}
                     </p>
                     <p className="text-sm text-gray-600 dark:text-white/60 leading-relaxed">
                       {project.solution}
@@ -103,7 +134,7 @@ export default function ProjectCaseStudy({
         {/* Right/Tech side */}
         <div className="flex-1 bg-gray-50 dark:bg-surface-overlay p-6 tablet:p-8 laptop:p-10 flex flex-col justify-center">
           <p className="text-xs font-medium text-gray-400 dark:text-white/30 uppercase tracking-wider mb-4">
-            Technology
+            {labels.technology}
           </p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
@@ -123,7 +154,7 @@ export default function ProjectCaseStudy({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-accent/70 hover:text-accent transition-colors mt-6 link"
             >
-              View project
+              {labels.viewProject}
               <svg
                 width="12"
                 height="12"
