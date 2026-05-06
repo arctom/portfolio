@@ -34,13 +34,13 @@ export default function ExperienceSkills() {
         "C++",
         "FastAPI",
         "React",
-        "AWS",
-        "GCP",
-        "Azure",
-        "IBM",
         "Git",
         "Agile",
       ],
+    },
+    {
+      title: t.skillGroups.cloud,
+      skills: ["AWS", "GCP", "Azure", "IBM"],
     },
   ];
 

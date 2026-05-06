@@ -121,6 +121,7 @@ export interface Translations {
     mlAi: string;
     dataEngineering: string;
     backendSystems: string;
+    cloud: string;
   };
 
   // Philosophy items
@@ -324,6 +325,7 @@ const en: Translations = {
     mlAi: "ML & AI",
     dataEngineering: "Data Engineering",
     backendSystems: "Backend & Systems",
+    cloud: "Cloud",
   },
 
   philosophies: [
@@ -533,6 +535,7 @@ const es: Translations = {
     mlAi: "ML e IA",
     dataEngineering: "Ingeniería de Datos",
     backendSystems: "Backend y Sistemas",
+    cloud: "Cloud",
   },
 
   philosophies: [
@@ -742,6 +745,7 @@ const fr: Translations = {
     mlAi: "ML et IA",
     dataEngineering: "Ingénierie des Données",
     backendSystems: "Backend et Systèmes",
+    cloud: "Cloud",
   },
 
   philosophies: [
